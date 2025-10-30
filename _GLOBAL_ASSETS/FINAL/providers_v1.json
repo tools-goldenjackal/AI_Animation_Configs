@@ -1,0 +1,129 @@
+{
+  "version": "1.0",
+  "notes": "Central registry of external and internal providers used by the pipeline.",
+  "providers": {
+    "openai": {
+      "purpose": "LLM text generation",
+      "type": "api",
+      "models": {
+        "gpt-4o-mini": {
+          "kind": "chat",
+          "context_window": 128000,
+          "cost_per_1k_tokens_prompt_usd": 0.005,
+          "cost_per_1k_tokens_output_usd": 0.015,
+          "default": true
+        },
+        "gpt-4.1": {
+          "kind": "chat",
+          "context_window": 128000,
+          "cost_per_1k_tokens_prompt_usd": 0.01,
+          "cost_per_1k_tokens_output_usd": 0.03,
+          "default": false
+        }
+      },
+      "rate_limits_ref": "/AI_Animation/_GLOBAL_ASSETS/rate_limits_v1.json#providers.openai.retry",
+      "telemetry_tags": [
+        "llm",
+        "openai"
+      ]
+    },
+    "runway": {
+      "purpose": "Image-to-Video generation",
+      "type": "api",
+      "endpoints": {
+        "gen3_i2v": {
+          "supports": [
+            "i2v"
+          ],
+          "notes": "Primary i2v endpoint for scene motion"
+        }
+      },
+      "rate_limits_ref": "/AI_Animation/_GLOBAL_ASSETS/rate_limits_v1.json#providers.runway.retry",
+      "telemetry_tags": [
+        "i2v",
+        "runway"
+      ]
+    },
+    "kling": {
+      "purpose": "Video generation alternative",
+      "type": "api",
+      "endpoints": {
+        "i2v": {
+          "supports": [
+            "i2v"
+          ],
+          "notes": "Alternate for variety or failover"
+        }
+      },
+      "rate_limits_ref": "/AI_Animation/_GLOBAL_ASSETS/rate_limits_v1.json#providers.kling.retry",
+      "telemetry_tags": [
+        "i2v",
+        "kling"
+      ]
+    },
+    "elevenlabs": {
+      "purpose": "Text-to-Speech",
+      "type": "api",
+      "voices_ref": "/AI_Animation/_GLOBAL_ASSETS/voices_v1.json",
+      "endpoints": {
+        "tts": {
+          "supports": [
+            "text",
+            "ssml"
+          ]
+        }
+      },
+      "rate_limits_ref": "/AI_Animation/_GLOBAL_ASSETS/rate_limits_v1.json#providers.elevenlabs.retry",
+      "telemetry_tags": [
+        "tts",
+        "elevenlabs"
+      ]
+    },
+    "huma": {
+      "purpose": "Lip-sync alignment",
+      "type": "api",
+      "endpoints": {
+        "lipsync": {
+          "supports": [
+            "wav+video_to_phoneme_align"
+          ]
+        }
+      },
+      "rate_limits_ref": "/AI_Animation/_GLOBAL_ASSETS/rate_limits_v1.json#providers.huma.retry",
+      "telemetry_tags": [
+        "lipsync",
+        "huma"
+      ]
+    },
+    "ffmpeg_local": {
+      "purpose": "Local assembly & compositing",
+      "type": "local_tool",
+      "endpoints": {
+        "concat": {
+          "supports": [
+            "video_concat",
+            "audio_mix",
+            "caption_burn"
+          ]
+        }
+      },
+      "notes": "Run via job queue to control system load",
+      "telemetry_tags": [
+        "assembly",
+        "local"
+      ]
+    }
+  },
+  "refs": {
+    "paths": "/AI_Animation/_GLOBAL_ASSETS/paths_v1.json",
+    "policy_weights": "/AI_Animation/_GLOBAL_ASSETS/policy_weights_v1.json",
+    "qc_thresholds": "/AI_Animation/_GLOBAL_ASSETS/qc_thresholds_v1.json",
+    "rate_limits": "/AI_Animation/_GLOBAL_ASSETS/rate_limits_v1.json",
+    "telemetry_schema": "/AI_Animation/_GLOBAL_ASSETS/telemetry_schema_v1.json",
+    "prompt_templates": "/AI_Animation/_GLOBAL_ASSETS/prompt_templates_v1.json",
+    "voices": "/AI_Animation/_GLOBAL_ASSETS/voices_v1.json"
+  },
+  "cost_tracking": "placeholder",
+  "updated_at": "2025-10-30T10:45:18Z",
+  "$schema": "#/schemas/providers"
+}

@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "notes": "Voice IDs are placeholders; replace with actual provider voice IDs when available.",
+  "provider": "elevenlabs",
+  "profiles": [
+    {
+      "id": "narrator_generic_enIN",
+      "display_name": "Narrator (Warm, Calm)",
+      "gender": "unspecified",
+      "locale": "en-IN",
+      "ssml_defaults": {
+        "rate": "medium",
+        "pitch": "0st",
+        "volume": "medium"
+      },
+      "style_hints": [
+        "gentle",
+        "encouraging",
+        "clear"
+      ],
+      "safety": {
+        "age_band": "3-5"
+      }
+    },
+    {
+      "id": "piku_voice_v1",
+      "display_name": "Piku (girl, curious)",
+      "gender": "female_child",
+      "locale": "en-IN",
+      "ssml_defaults": {
+        "rate": "medium",
+        "pitch": "+3st",
+        "volume": "medium"
+      },
+      "style_hints": [
+        "curious",
+        "playful",
+        "bright"
+      ],
+      "safety": {
+        "age_band": "3-5"
+      }
+    },
+    {
+      "id": "nikki_voice_v1",
+      "display_name": "Nikki (girl, excited)",
+      "gender": "female_child",
+      "locale": "en-IN",
+      "ssml_defaults": {
+        "rate": "medium-fast",
+        "pitch": "+2st",
+        "volume": "medium"
+      },
+      "style_hints": [
+        "friendly",
+        "excited",
+        "supportive"
+      ],
+      "safety": {
+        "age_band": "3-5"
+      }
+    },
+    {
+      "id": "ayan_voice_v1",
+      "display_name": "Ayan (boy, thoughtful)",
+      "gender": "male_child",
+      "locale": "en-IN",
+      "ssml_defaults": {
+        "rate": "medium",
+        "pitch": "-1st",
+        "volume": "medium"
+      },
+      "style_hints": [
+        "thoughtful",
+        "kind",
+        "steady"
+      ],
+      "safety": {
+        "age_band": "3-5"
+      }
+    }
+  ],
+  "$schema": "#/schemas/voices",
+  "updated_at": "2025-10-30T10:45:18Z"
+}

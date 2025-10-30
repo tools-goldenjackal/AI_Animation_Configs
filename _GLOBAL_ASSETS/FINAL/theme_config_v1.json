@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "default_scene_count": 5,
+  "target_duration_s": 60,
+  "fps": 24,
+  "aspect_ratio": "16:9",
+  "edutainment_min_ratio": 0.6,
+  "captions_enabled": true,
+  "updated_at": "2025-10-30T10:45:18Z",
+  "$schema": "#/schemas/theme_config"
+}

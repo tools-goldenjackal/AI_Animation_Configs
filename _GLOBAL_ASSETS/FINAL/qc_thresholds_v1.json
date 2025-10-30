@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "age_band": "3-5",
+  "image": {
+    "character_consistency_min": 0.85,
+    "shot_type_confidence_min": 0.8,
+    "min_width_px": 1920,
+    "min_height_px": 1080
+  },
+  "video": {
+    "temporal_ssim_min": 0.9,
+    "min_fps": 24,
+    "duration_tolerance_s": 0.3
+  },
+  "audio": {
+    "av_sync_tolerance_s": 0.5,
+    "lufs_target": -16,
+    "lufs_tolerance": 1.0
+  },
+  "lipsync": {
+    "correlation_min": 0.9,
+    "artifact_rate_max": 0.1
+  },
+  "pacing": {
+    "max_cuts_per_min": 12
+  },
+  "edutainment": {
+    "min_ratio": 0.6
+  },
+  "captions": {
+    "required": true
+  },
+  "safety": {
+    "strict": true
+  },
+  "$schema": "#/schemas/qc_thresholds",
+  "updated_at": "2025-10-30T10:45:18Z"
+}

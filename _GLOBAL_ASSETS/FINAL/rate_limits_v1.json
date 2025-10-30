@@ -1,0 +1,112 @@
+{
+  "version": "1.0",
+  "generated_at": "2025-10-30T09:54:30.971419Z",
+  "defaults": {
+    "concurrency": 2,
+    "rpm": 60,
+    "rpd": 50000,
+    "burst": 5,
+    "retry": {
+      "max_attempts": 3,
+      "initial_delay_ms": 1000,
+      "multiplier": 2.0,
+      "jitter": true
+    }
+  },
+  "providers": {
+    "openai": {
+      "models": {
+        "gpt-4o-mini": {
+          "rpm": 200,
+          "concurrency": 5
+        },
+        "gpt-4.1": {
+          "rpm": 60,
+          "concurrency": 2
+        }
+      },
+      "retry": {
+        "max_attempts": 4,
+        "initial_delay_ms": 1200,
+        "multiplier": 2.0,
+        "jitter": true
+      },
+      "max_rps": 2,
+      "burst": 4
+    },
+    "runway": {
+      "endpoints": {
+        "gen3_i2v": {
+          "rpm": 30,
+          "concurrency": 2
+        }
+      },
+      "retry": {
+        "max_attempts": 3,
+        "initial_delay_ms": 2000,
+        "multiplier": 1.8,
+        "jitter": true
+      },
+      "max_rps": 2,
+      "burst": 4
+    },
+    "kling": {
+      "endpoints": {
+        "i2v": {
+          "rpm": 20,
+          "concurrency": 1
+        }
+      },
+      "retry": {
+        "max_attempts": 3,
+        "initial_delay_ms": 2500,
+        "multiplier": 2.0,
+        "jitter": true
+      },
+      "max_rps": 2,
+      "burst": 4
+    },
+    "elevenlabs": {
+      "endpoints": {
+        "tts": {
+          "rpm": 120,
+          "concurrency": 5
+        }
+      },
+      "retry": {
+        "max_attempts": 4,
+        "initial_delay_ms": 800,
+        "multiplier": 2.0,
+        "jitter": true
+      },
+      "max_rps": 2,
+      "burst": 4
+    },
+    "huma": {
+      "endpoints": {
+        "lipsync": {
+          "rpm": 25,
+          "concurrency": 2
+        }
+      },
+      "retry": {
+        "max_attempts": 3,
+        "initial_delay_ms": 1500,
+        "multiplier": 1.8,
+        "jitter": true
+      },
+      "max_rps": 2,
+      "burst": 4
+    },
+    "ffmpeg_local": {
+      "notes": "Local tool; use queue to limit system load.",
+      "limits": {
+        "concurrency": 2
+      },
+      "max_rps": 2,
+      "burst": 4
+    }
+  },
+  "$schema": "#/schemas/rate_limits",
+  "updated_at": "2025-10-30T10:45:18Z"
+}

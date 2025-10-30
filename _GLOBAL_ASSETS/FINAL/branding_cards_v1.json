@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "opening": {
+    "text": "Piku's Dream House",
+    "bg_color": "#3BB273",
+    "duration_s": 2.0,
+    "animation": "fade_in"
+  },
+  "ending": {
+    "text": "Thanks for watching!",
+    "cta": "See you next time!",
+    "duration_s": 3.0,
+    "animation": "fade_out"
+  },
+  "updated_at": "2025-10-30T10:45:18Z",
+  "$schema": "#/schemas/branding_cards"
+}
