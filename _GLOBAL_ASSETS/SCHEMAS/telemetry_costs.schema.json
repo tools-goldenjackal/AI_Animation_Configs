@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "telemetry_costs.schema.json",
+  "title": "Telemetry & Costs",
+  "type": "object",
+  "required": [
+    "version",
+    "episode_id",
+    "rows"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "episode_id": {
+      "type": "string"
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "timestamp",
+          "step",
+          "provider",
+          "status",
+          "runtime_ms",
+          "api_calls",
+          "est_cost_usd"
+        ],
+        "properties": {
+          "timestamp": {
+            "type": "string"
+          },
+          "step": {
+            "type": "string"
+          },
+          "provider": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "runtime_ms": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "api_calls": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "est_cost_usd": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}

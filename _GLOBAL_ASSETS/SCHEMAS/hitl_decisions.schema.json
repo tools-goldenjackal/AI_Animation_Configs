@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "hitl_decisions.schema.json",
+  "title": "Human-in-the-Loop Decisions",
+  "type": "object",
+  "required": [
+    "version",
+    "episode_id",
+    "items"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "episode_id": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "step",
+          "decision"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "step": {
+            "type": "string",
+            "enum": [
+              "script",
+              "t2i",
+              "i2v",
+              "vo",
+              "lipsync",
+              "assembly",
+              "qc"
+            ]
+          },
+          "decision": {
+            "type": "string",
+            "enum": [
+              "approve",
+              "revise",
+              "reject"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "assigned_to": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}

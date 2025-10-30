@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lipsync_jobs.schema.json",
+  "title": "Lip-sync Jobs",
+  "type": "object",
+  "required": [
+    "version",
+    "episode_id",
+    "provider",
+    "jobs"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "episode_id": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "jobs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "scene_id",
+          "video_clip",
+          "audio_clip"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "scene_id": {
+            "type": "string"
+          },
+          "video_clip": {
+            "type": "string"
+          },
+          "audio_clip": {
+            "type": "string"
+          },
+          "character": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}

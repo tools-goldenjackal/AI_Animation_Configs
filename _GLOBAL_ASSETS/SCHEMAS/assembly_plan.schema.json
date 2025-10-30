@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "assembly_plan.schema.json",
+  "title": "Assembly Plan",
+  "type": "object",
+  "required": [
+    "version",
+    "episode_id",
+    "fps",
+    "timeline"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "episode_id": {
+      "type": "string"
+    },
+    "fps": {
+      "type": "integer",
+      "minimum": 12
+    },
+    "resolution": {
+      "type": "string"
+    },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "src",
+          "start_s",
+          "duration_s"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "video",
+              "audio",
+              "caption",
+              "branding"
+            ]
+          },
+          "src": {
+            "type": "string"
+          },
+          "start_s": {
+            "type": "number",
+            "minimum": 0
+          },
+          "duration_s": {
+            "type": "number",
+            "minimum": 0
+          },
+          "metadata": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}

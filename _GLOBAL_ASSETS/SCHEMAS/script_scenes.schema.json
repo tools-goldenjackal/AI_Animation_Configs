@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "script_scenes.schema.json",
+  "title": "Script Scenes",
+  "type": "object",
+  "required": [
+    "version",
+    "episode_id",
+    "language",
+    "scenes"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "episode_id": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "scenes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "set_id",
+          "characters",
+          "dialogue",
+          "duration_s"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "set_id": {
+            "type": "string"
+          },
+          "characters": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "dialogue": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "character",
+                "text"
+              ],
+              "properties": {
+                "character": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "ssml": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "duration_s": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}

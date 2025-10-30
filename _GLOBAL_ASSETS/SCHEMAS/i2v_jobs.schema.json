@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "i2v_jobs.schema.json",
+  "title": "Image-to-Video Jobs",
+  "type": "object",
+  "required": [
+    "version",
+    "episode_id",
+    "fps",
+    "jobs"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "episode_id": {
+      "type": "string"
+    },
+    "fps": {
+      "type": "integer",
+      "minimum": 12
+    },
+    "provider": {
+      "type": "string"
+    },
+    "jobs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "scene_id",
+          "input_image",
+          "duration_s"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "scene_id": {
+            "type": "string"
+          },
+          "input_image": {
+            "type": "string"
+          },
+          "motion_prompt": {
+            "type": "string"
+          },
+          "duration_s": {
+            "type": "number",
+            "minimum": 1
+          },
+          "safety": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}

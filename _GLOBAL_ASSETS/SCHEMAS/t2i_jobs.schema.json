@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "t2i_jobs.schema.json",
+  "title": "Text-to-Image Jobs",
+  "type": "object",
+  "required": [
+    "version",
+    "episode_id",
+    "jobs"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "episode_id": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "jobs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "scene_id",
+          "prompt",
+          "width",
+          "height",
+          "num_images"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "scene_id": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "negative_prompt": {
+            "type": "string"
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 256
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 256
+          },
+          "num_images": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "seed": {
+            "type": "integer"
+          },
+          "style_tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "safety": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}

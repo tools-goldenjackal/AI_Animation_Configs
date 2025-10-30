@@ -1,0 +1,15 @@
+{
+  "generated_at": "2025-10-30T11:12:57Z",
+  "schemas": [
+    "assembly_plan.schema.json",
+    "delivery_manifest.schema.json",
+    "hitl_decisions.schema.json",
+    "i2v_jobs.schema.json",
+    "lipsync_jobs.schema.json",
+    "qc_report.schema.json",
+    "script_scenes.schema.json",
+    "t2i_jobs.schema.json",
+    "telemetry_costs.schema.json",
+    "vo_jobs.schema.json"
+  ]
+}

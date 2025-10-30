@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "delivery_manifest.schema.json",
+  "title": "Delivery Manifest",
+  "type": "object",
+  "required": [
+    "version",
+    "episode_id",
+    "items"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "episode_id": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "path",
+          "duration_s"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "video",
+              "audio",
+              "caption",
+              "thumbnail",
+              "metadata"
+            ]
+          },
+          "path": {
+            "type": "string"
+          },
+          "duration_s": {
+            "type": "number",
+            "minimum": 0
+          },
+          "checksum": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}

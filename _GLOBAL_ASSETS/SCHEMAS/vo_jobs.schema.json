@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "vo_jobs.schema.json",
+  "title": "Voiceover Jobs",
+  "type": "object",
+  "required": [
+    "version",
+    "episode_id",
+    "provider",
+    "jobs"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "episode_id": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "jobs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "scene_id",
+          "character",
+          "voice_id",
+          "text"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "scene_id": {
+            "type": "string"
+          },
+          "character": {
+            "type": "string"
+          },
+          "voice_id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "ssml": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}
