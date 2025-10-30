@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "episode_id": "EP001",
+  "fps": 24,
+  "provider": "runway.gen3_i2v",
+  "jobs": [
+    {
+      "id": "I2V_S1_01",
+      "scene_id": "S1",
+      "input_image": "/assets/S1/frame_key.png",
+      "motion_prompt": "Subtle camera parallax, characters look down at blocks and smile.",
+      "duration_s": 3,
+      "safety": {
+        "age_band": "3-5"
+      }
+    }
+  ],
+  "updated_at": "2025-10-30T11:12:57Z"
+}

@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "episode_id": "EP001",
+  "language": "en-IN",
+  "notes": "Minimal example for wiring n8n.",
+  "scenes": [
+    {
+      "id": "S1",
+      "set_id": "dream_house_living_room",
+      "characters": [
+        "Piku",
+        "Nikki"
+      ],
+      "dialogue": [
+        {
+          "character": "Piku",
+          "text": "Look at these colorful blocks!"
+        },
+        {
+          "character": "Nikki",
+          "text": "Let’s count them together!"
+        }
+      ],
+      "duration_s": 15
+    },
+    {
+      "id": "S2",
+      "set_id": "dream_house_play_room",
+      "characters": [
+        "Ayan"
+      ],
+      "dialogue": [
+        {
+          "character": "Ayan",
+          "text": "We made a tall tower!"
+        }
+      ],
+      "duration_s": 12
+    }
+  ],
+  "updated_at": "2025-10-30T11:12:57Z"
+}

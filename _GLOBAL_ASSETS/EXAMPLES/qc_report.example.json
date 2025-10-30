@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "episode_id": "EP001",
+  "checks": [
+    {
+      "id": "IMG_CC",
+      "category": "image",
+      "metric": "character_consistency",
+      "value": 0.88,
+      "threshold": 0.85,
+      "pass": true
+    },
+    {
+      "id": "VID_SSIM",
+      "category": "video",
+      "metric": "temporal_ssim",
+      "value": 0.91,
+      "threshold": 0.9,
+      "pass": true
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0
+  },
+  "updated_at": "2025-10-30T11:12:57Z"
+}

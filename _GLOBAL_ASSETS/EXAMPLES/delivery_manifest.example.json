@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "episode_id": "EP001",
+  "items": [
+    {
+      "type": "video",
+      "path": "/deliverables/EP001_final_1080p.mp4",
+      "duration_s": 60,
+      "checksum": "sha256:abc123"
+    },
+    {
+      "type": "thumbnail",
+      "path": "/deliverables/EP001_thumb.png",
+      "duration_s": 0
+    }
+  ],
+  "updated_at": "2025-10-30T11:12:57Z"
+}

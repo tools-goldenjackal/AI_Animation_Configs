@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "episode_id": "EP001",
+  "provider": "elevenlabs",
+  "jobs": [
+    {
+      "id": "VO_S1_L1",
+      "scene_id": "S1",
+      "character": "Piku",
+      "voice_id": "piku_voice_v1",
+      "text": "Look at these colorful blocks!"
+    },
+    {
+      "id": "VO_S1_L2",
+      "scene_id": "S1",
+      "character": "Nikki",
+      "voice_id": "nikki_voice_v1",
+      "text": "Let’s count them together!"
+    }
+  ],
+  "updated_at": "2025-10-30T11:12:57Z"
+}

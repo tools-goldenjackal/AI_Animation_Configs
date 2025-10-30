@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "episode_id": "EP001",
+  "rows": [
+    {
+      "timestamp": "2025-10-30T11:12:57Z",
+      "step": "script",
+      "provider": "openai",
+      "status": "ok",
+      "runtime_ms": 1200,
+      "api_calls": 1,
+      "est_cost_usd": 0.004
+    },
+    {
+      "timestamp": "2025-10-30T11:12:57Z",
+      "step": "i2v",
+      "provider": "runway",
+      "status": "ok",
+      "runtime_ms": 45000,
+      "api_calls": 1,
+      "est_cost_usd": 0.1
+    }
+  ],
+  "updated_at": "2025-10-30T11:12:57Z"
+}

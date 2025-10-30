@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "episode_id": "EP001",
+  "fps": 24,
+  "resolution": "1920x1080",
+  "timeline": [
+    {
+      "type": "branding",
+      "src": "/branding/opening.png",
+      "start_s": 0,
+      "duration_s": 2
+    },
+    {
+      "type": "video",
+      "src": "/video/S1_01.mp4",
+      "start_s": 2,
+      "duration_s": 3
+    },
+    {
+      "type": "audio",
+      "src": "/audio/VO_S1_L1.wav",
+      "start_s": 2,
+      "duration_s": 3
+    },
+    {
+      "type": "caption",
+      "src": "/captions/S1.srt",
+      "start_s": 2,
+      "duration_s": 3
+    },
+    {
+      "type": "branding",
+      "src": "/branding/ending.png",
+      "start_s": 57,
+      "duration_s": 3
+    }
+  ],
+  "updated_at": "2025-10-30T11:12:57Z"
+}

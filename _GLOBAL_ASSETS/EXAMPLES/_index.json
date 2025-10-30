@@ -1,0 +1,15 @@
+{
+  "generated_at": "2025-10-30T11:12:57Z",
+  "examples": [
+    "assembly_plan.example.json",
+    "delivery_manifest.example.json",
+    "hitl_decisions.example.json",
+    "i2v_jobs.example.json",
+    "lipsync_jobs.example.json",
+    "qc_report.example.json",
+    "script_scenes.example.json",
+    "t2i_jobs.example.json",
+    "telemetry_costs.example.json",
+    "vo_jobs.example.json"
+  ]
+}

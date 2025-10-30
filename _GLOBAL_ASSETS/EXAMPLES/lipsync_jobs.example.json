@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "episode_id": "EP001",
+  "provider": "huma.lipsync",
+  "jobs": [
+    {
+      "id": "LS_S1_L1",
+      "scene_id": "S1",
+      "video_clip": "/video/S1_01.mp4",
+      "audio_clip": "/audio/VO_S1_L1.wav",
+      "character": "Piku"
+    }
+  ],
+  "updated_at": "2025-10-30T11:12:57Z"
+}

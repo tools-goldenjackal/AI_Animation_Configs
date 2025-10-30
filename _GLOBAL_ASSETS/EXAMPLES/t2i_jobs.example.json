@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "episode_id": "EP001",
+  "provider": "midjourney_like",
+  "jobs": [
+    {
+      "id": "T2I_S1_01",
+      "scene_id": "S1",
+      "prompt": "Cozy living room, bright pastel, two friendly kids looking at colorful blocks on a soft mat, safe rounded props, 3-5 audience style.",
+      "negative_prompt": "sharp edges, glass, unsafe props",
+      "width": 1920,
+      "height": 1080,
+      "num_images": 1,
+      "style_tags": [
+        "bright",
+        "pastel",
+        "whimsical"
+      ],
+      "safety": {
+        "age_band": "3-5"
+      }
+    }
+  ],
+  "updated_at": "2025-10-30T11:12:57Z"
+}

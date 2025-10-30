@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "episode_id": "EP001",
+  "items": [
+    {
+      "id": "HITL_S1",
+      "step": "script",
+      "decision": "approve",
+      "reason": "Clear learning goal"
+    }
+  ],
+  "updated_at": "2025-10-30T11:12:57Z"
+}
