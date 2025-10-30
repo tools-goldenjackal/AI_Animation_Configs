@@ -1,0 +1,99 @@
+{
+  "sets": [
+    {
+      "id": "dream_house_exterior_day",
+      "name": "Dream House Exterior (Day)",
+      "style_tags": [
+        "bright",
+        "pastel",
+        "whimsical"
+      ],
+      "allowed_characters": [
+        "piku",
+        "nikki",
+        "ayan"
+      ],
+      "notes": "Gentle sun, soft shadows; no roads, no vehicles.",
+      "tags": [],
+      "allowed_camera": [
+        "wide",
+        "medium",
+        "close"
+      ],
+      "safe_actions": [
+        "walk",
+        "wave",
+        "point",
+        "sit",
+        "pick_up_block"
+      ]
+    },
+    {
+      "id": "dream_house_living_room",
+      "name": "Living Room",
+      "style_tags": [
+        "cozy",
+        "colorful",
+        "kid-safe"
+      ],
+      "allowed_characters": [
+        "piku",
+        "nikki",
+        "ayan"
+      ],
+      "zones": [
+        "sofa_corner",
+        "reading_nook"
+      ],
+      "notes": "No breakables; round-corner props only.",
+      "tags": [],
+      "allowed_camera": [
+        "wide",
+        "medium",
+        "close"
+      ],
+      "safe_actions": [
+        "walk",
+        "wave",
+        "point",
+        "sit",
+        "pick_up_block"
+      ]
+    },
+    {
+      "id": "dream_house_play_room",
+      "name": "Play Room",
+      "style_tags": [
+        "toys",
+        "STEM",
+        "soft_mats"
+      ],
+      "allowed_characters": [
+        "piku",
+        "nikki",
+        "ayan"
+      ],
+      "zones": [
+        "blocks_table",
+        "puzzle_rug"
+      ],
+      "notes": "STEM props are large, simple shapes.",
+      "tags": [],
+      "allowed_camera": [
+        "wide",
+        "medium",
+        "close"
+      ],
+      "safe_actions": [
+        "walk",
+        "wave",
+        "point",
+        "sit",
+        "pick_up_block"
+      ]
+    }
+  ],
+  "$schema": "#/schemas/sets_catalog",
+  "version": "v1",
+  "updated_at": "2025-10-30T10:14:44Z"
+}

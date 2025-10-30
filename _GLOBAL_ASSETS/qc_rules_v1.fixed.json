@@ -1,0 +1,47 @@
+{
+  "t2i": {
+    "character_similarity_min": 0.85,
+    "shot_match_required": true,
+    "max_retries": 3
+  },
+  "i2v": {
+    "duration_tolerance_s": 0.3,
+    "temporal_ssim_min": 0.9,
+    "max_retries": 3
+  },
+  "audio": {
+    "duration_tolerance_s": 0.5,
+    "lufs_target": -16,
+    "music_duck_db": -12
+  },
+  "lipsync": {
+    "av_corr_min": 0.9,
+    "max_retries": 2
+  },
+  "global": {
+    "fallback_chain": {
+      "t2i": [
+        "openai_dalle",
+        "sdxl_replicate"
+      ],
+      "i2v": [
+        "runway",
+        "kling",
+        "pika"
+      ],
+      "lipsync": [
+        "huma",
+        "wav2lip"
+      ]
+    }
+  },
+  "$schema": "#/schemas/qc_rules",
+  "version": "v1",
+  "updated_at": "2025-10-30T10:14:44Z",
+  "rules": {
+    "enforce_shot_type": true,
+    "enforce_character_whitelist": true,
+    "block_new_characters": true,
+    "require_captions": true
+  }
+}

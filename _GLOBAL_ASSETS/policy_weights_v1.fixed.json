@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "aggregate_qc_weights": {
+    "character_consistency": 0.35,
+    "temporal_consistency": 0.25,
+    "safety": 0.2,
+    "audio_sync": 0.1,
+    "pacing": 0.1
+  },
+  "pass_threshold": 0.8,
+  "failure_actions": {
+    "auto_retry": true,
+    "max_retries": 3,
+    "fallback_enabled": true,
+    "require_hitl_after_failures": 2
+  },
+  "$schema": "#/schemas/policy_weights",
+  "updated_at": "2025-10-30T10:14:44Z",
+  "weights": {
+    "safety": 0.5,
+    "coherence": 0.2,
+    "pacing": 0.1,
+    "education": 0.2
+  }
+}

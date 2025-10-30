@@ -1,0 +1,40 @@
+{
+  "elements": [
+    {
+      "id": "blocks_primary",
+      "name": "Color Blocks Set",
+      "style_tags": [
+        "large",
+        "rounded",
+        "primary_colors"
+      ],
+      "safety": "age_3_5",
+      "notes": "No small choking hazards; keep pieces large and simple.",
+      "tags": [],
+      "safety_flags": {
+        "choking_hazard": false,
+        "sharp": false,
+        "small_parts": false
+      }
+    },
+    {
+      "id": "picture_book_animals",
+      "name": "Animals Picture Book",
+      "style_tags": [
+        "flat",
+        "bold_illustrations"
+      ],
+      "safety": "age_3_5",
+      "notes": "If text appears on page, narration must read-aloud.",
+      "tags": [],
+      "safety_flags": {
+        "choking_hazard": false,
+        "sharp": false,
+        "small_parts": false
+      }
+    }
+  ],
+  "$schema": "#/schemas/elements_catalog",
+  "version": "v1",
+  "updated_at": "2025-10-30T10:14:44Z"
+}

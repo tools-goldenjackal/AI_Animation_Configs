@@ -1,0 +1,97 @@
+{
+  "characters": [
+    {
+      "id": "piku",
+      "name": "Piku",
+      "gender": "female",
+      "age_appearance": 4,
+      "primary_colors": [
+        "#3BB273",
+        "#FFFFFF"
+      ],
+      "description": "Small fuzzy green creature with a yellow star hairpin, big sparkling green eyes; cheerful, curious.",
+      "do": [
+        "friendly expressions",
+        "gentle gestures",
+        "curious poses"
+      ],
+      "dont": [
+        "angry/scary faces",
+        "fast/aggressive motion"
+      ],
+      "voice_profile": "narrative-childlike-bright",
+      "style_tags": [
+        "cartoon",
+        "high-contrast",
+        "kid-safe",
+        "simple-shapes"
+      ]
+    },
+    {
+      "id": "nikki",
+      "name": "Nikki",
+      "gender": "female",
+      "age_appearance": 5,
+      "primary_colors": [
+        "#F06292",
+        "#8E44AD"
+      ],
+      "description": "Cheerful pink character with big bow and purple eyes; empathetic, playful.",
+      "do": [
+        "warm smiles",
+        "hand-to-cheek surprise",
+        "small hops"
+      ],
+      "dont": [
+        "sad crying",
+        "complex hand props"
+      ],
+      "voice_profile": "friendly-soft",
+      "style_tags": [
+        "cartoon",
+        "bright",
+        "kid-safe"
+      ]
+    },
+    {
+      "id": "ayan",
+      "name": "Ayan",
+      "gender": "male",
+      "age_appearance": 5,
+      "primary_colors": [
+        "#E74C3C",
+        "#FFD166"
+      ],
+      "description": "Red outfit, energetic boy; supportive, brave, never reckless.",
+      "do": [
+        "encouraging gestures",
+        "slow waves",
+        "cautious exploration"
+      ],
+      "dont": [
+        "running fast",
+        "jumping off heights"
+      ],
+      "voice_profile": "gentle-boy",
+      "style_tags": [
+        "cartoon",
+        "bright",
+        "kid-safe"
+      ]
+    }
+  ],
+  "shot_safety": {
+    "camera_safe_angles": [
+      "wide",
+      "medium",
+      "close"
+    ],
+    "avoid_angles": [
+      "extreme_dutch",
+      "rapid_zoom"
+    ]
+  },
+  "$schema": "#/schemas/generic",
+  "version": "v1",
+  "updated_at": "2025-10-30T10:14:44Z"
+}

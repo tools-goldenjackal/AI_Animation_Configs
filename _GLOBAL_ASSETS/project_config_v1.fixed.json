@@ -1,0 +1,551 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2025-10-30T10:14:44Z",
+  "stages": {
+    "script": {
+      "primary_provider": "openai_gpt",
+      "fallback_providers": [
+        "openai_gpt_mini"
+      ],
+      "policy": {
+        "timeout_s": 60,
+        "retries": 2,
+        "backoff_ms": 800,
+        "concurrency": 2
+      }
+    },
+    "t2i": {
+      "primary_provider": "openai_dalle",
+      "fallback_providers": [
+        "sd_replicate"
+      ],
+      "policy": {
+        "timeout_s": 120,
+        "retries": 2,
+        "backoff_ms": 1200,
+        "concurrency": 2
+      }
+    },
+    "i2v": {
+      "primary_provider": "runway_gen3",
+      "fallback_providers": [
+        "kling_i2v",
+        "pika_i2v"
+      ],
+      "policy": {
+        "timeout_s": 600,
+        "retries": 2,
+        "backoff_ms": 1500,
+        "concurrency": 1
+      }
+    },
+    "tts": {
+      "primary_provider": "elevenlabs_tts",
+      "fallback_providers": [
+        "azure_tts"
+      ],
+      "policy": {
+        "timeout_s": 90,
+        "retries": 2,
+        "backoff_ms": 800,
+        "concurrency": 2
+      }
+    },
+    "lipsync": {
+      "primary_provider": "huma_lipsync",
+      "fallback_providers": [
+        "wav2lip_local",
+        "did_lipsync"
+      ],
+      "policy": {
+        "timeout_s": 300,
+        "retries": 1,
+        "backoff_ms": 1000,
+        "concurrency": 1
+      }
+    },
+    "assemble": {
+      "primary_provider": "ffmpeg_local",
+      "fallback_providers": [
+        "creatomate_api"
+      ],
+      "policy": {
+        "timeout_s": 300,
+        "retries": 1,
+        "backoff_ms": 500,
+        "concurrency": 2
+      }
+    },
+    "subtitles": {
+      "primary_provider": "whisper_openai",
+      "fallback_providers": [
+        "whisper_local"
+      ],
+      "policy": {
+        "timeout_s": 180,
+        "retries": 1,
+        "backoff_ms": 500,
+        "concurrency": 2
+      }
+    }
+  },
+  "providers": {
+    "openai_gpt": {
+      "name": "OpenAI GPT",
+      "type": "llm",
+      "capabilities": [
+        "script_gen",
+        "prompt_compose",
+        "safety_rewrite"
+      ],
+      "endpoints": {
+        "api_base": "https://api.openai.com/v1",
+        "chat": "/chat/completions"
+      },
+      "auth": {
+        "type": "bearer",
+        "key_env": "OPENAI_API_KEY"
+      },
+      "pricing": {
+        "unit": "per_1k_tokens",
+        "input_usd": 0.0,
+        "output_usd": 0.0,
+        "note": "Fill with your current model pricing"
+      },
+      "limits": {
+        "rpm": 300,
+        "rpd": 50000
+      },
+      "defaults": {
+        "model": "gpt-4o-mini",
+        "temperature": 0.4,
+        "max_tokens": 1200
+      }
+    },
+    "openai_gpt_mini": {
+      "name": "OpenAI GPT (Mini Fallback)",
+      "type": "llm",
+      "capabilities": [
+        "script_gen"
+      ],
+      "endpoints": {
+        "api_base": "https://api.openai.com/v1",
+        "chat": "/chat/completions"
+      },
+      "auth": {
+        "type": "bearer",
+        "key_env": "OPENAI_API_KEY"
+      },
+      "pricing": {
+        "unit": "per_1k_tokens",
+        "input_usd": 0.0,
+        "output_usd": 0.0
+      },
+      "limits": {
+        "rpm": 300,
+        "rpd": 50000
+      },
+      "defaults": {
+        "model": "gpt-4o-mini",
+        "temperature": 0.4,
+        "max_tokens": 900
+      }
+    },
+    "openai_dalle": {
+      "name": "OpenAI DALL·E",
+      "type": "t2i",
+      "capabilities": [
+        "image_gen"
+      ],
+      "endpoints": {
+        "api_base": "https://api.openai.com/v1",
+        "images": "/images/generations"
+      },
+      "auth": {
+        "type": "bearer",
+        "key_env": "OPENAI_API_KEY"
+      },
+      "pricing": {
+        "unit": "per_image",
+        "image_usd": 0.0
+      },
+      "limits": {
+        "rpm": 60,
+        "rpd": 5000
+      },
+      "defaults": {
+        "size": "1920x1080",
+        "n": 1
+      }
+    },
+    "sd_replicate": {
+      "name": "Stable Diffusion (Replicate)",
+      "type": "t2i",
+      "capabilities": [
+        "image_gen"
+      ],
+      "endpoints": {
+        "api_base": "https://api.replicate.com/v1",
+        "predictions": "/predictions"
+      },
+      "auth": {
+        "type": "bearer",
+        "key_env": "REPLICATE_API_TOKEN"
+      },
+      "pricing": {
+        "unit": "per_minute_gpu",
+        "estimate_usd": 0.0
+      },
+      "limits": {
+        "rpm": 60,
+        "rpd": 5000
+      },
+      "defaults": {
+        "model": "stability-ai/sdxl",
+        "width": 1920,
+        "height": 1080,
+        "cfg_scale": 7
+      }
+    },
+    "runway_gen3": {
+      "name": "Runway Gen-3",
+      "type": "i2v",
+      "capabilities": [
+        "image_to_video"
+      ],
+      "endpoints": {
+        "api_base": "https://api.runwayml.com/v1",
+        "jobs": "/generations"
+      },
+      "auth": {
+        "type": "bearer",
+        "key_env": "RUNWAY_API_KEY"
+      },
+      "pricing": {
+        "unit": "per_second_video",
+        "estimate_usd": 0.0
+      },
+      "limits": {
+        "rpm": 30,
+        "rpd": 5000
+      },
+      "defaults": {
+        "fps": 24,
+        "duration_s": 5,
+        "motion_intensity": "subtle"
+      }
+    },
+    "kling_i2v": {
+      "name": "Kling I2V",
+      "type": "i2v",
+      "capabilities": [
+        "image_to_video"
+      ],
+      "endpoints": {
+        "api_base": "https://api.klingai.com/v1",
+        "jobs": "/i2v"
+      },
+      "auth": {
+        "type": "bearer",
+        "key_env": "KLING_API_KEY"
+      },
+      "pricing": {
+        "unit": "per_second_video",
+        "estimate_usd": 0.0
+      },
+      "limits": {
+        "rpm": 30,
+        "rpd": 3000
+      },
+      "defaults": {
+        "fps": 24,
+        "duration_s": 5,
+        "motion_intensity": "subtle"
+      }
+    },
+    "pika_i2v": {
+      "name": "Pika I2V",
+      "type": "i2v",
+      "capabilities": [
+        "image_to_video"
+      ],
+      "endpoints": {
+        "api_base": "https://api.pika.art/v1",
+        "jobs": "/generations"
+      },
+      "auth": {
+        "type": "bearer",
+        "key_env": "PIKA_API_KEY"
+      },
+      "pricing": {
+        "unit": "per_second_video",
+        "estimate_usd": 0.0
+      },
+      "limits": {
+        "rpm": 30,
+        "rpd": 3000
+      },
+      "defaults": {
+        "fps": 24,
+        "duration_s": 5
+      }
+    },
+    "elevenlabs_tts": {
+      "name": "ElevenLabs",
+      "type": "tts",
+      "capabilities": [
+        "voiceover"
+      ],
+      "endpoints": {
+        "api_base": "https://api.elevenlabs.io/v1",
+        "tts": "/text-to-speech"
+      },
+      "auth": {
+        "type": "header",
+        "header_name": "xi-api-key",
+        "key_env": "ELEVENLABS_API_KEY"
+      },
+      "pricing": {
+        "unit": "per_minute_audio",
+        "estimate_usd": 0.0
+      },
+      "limits": {
+        "rpm": 60,
+        "rpd": 10000
+      },
+      "defaults": {
+        "voice_id": "stock_kid_friendly_01",
+        "stability": 0.5,
+        "style": 0.5
+      }
+    },
+    "azure_tts": {
+      "name": "Azure Cognitive Services TTS",
+      "type": "tts",
+      "capabilities": [
+        "voiceover"
+      ],
+      "endpoints": {
+        "api_base": "https://{region}.tts.speech.microsoft.com/cognitiveservices",
+        "tts": "/v1"
+      },
+      "auth": {
+        "type": "header",
+        "header_name": "Ocp-Apim-Subscription-Key",
+        "key_env": "AZURE_TTS_KEY"
+      },
+      "pricing": {
+        "unit": "per_million_chars",
+        "estimate_usd": 0.0
+      },
+      "limits": {
+        "rpm": 100,
+        "rpd": 20000
+      },
+      "defaults": {
+        "voice": "en-US-AvaNeural",
+        "rate": "0%",
+        "pitch": "0st"
+      }
+    },
+    "huma_lipsync": {
+      "name": "Huma.ai LipSync",
+      "type": "lipsync",
+      "capabilities": [
+        "lip_sync"
+      ],
+      "endpoints": {
+        "api_base": "https://api.huma.ai/v1",
+        "jobs": "/lipsync"
+      },
+      "auth": {
+        "type": "bearer",
+        "key_env": "HUMA_API_KEY"
+      },
+      "pricing": {
+        "unit": "per_second_video",
+        "estimate_usd": 0.0
+      },
+      "limits": {
+        "rpm": 20,
+        "rpd": 2000
+      },
+      "defaults": {
+        "style": "cartoon",
+        "intensity": "medium"
+      }
+    },
+    "wav2lip_local": {
+      "name": "Wav2Lip (Local)",
+      "type": "lipsync",
+      "capabilities": [
+        "lip_sync"
+      ],
+      "endpoints": {
+        "cli": "python wav2lip_infer.py"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "pricing": {
+        "unit": "per_use",
+        "estimate_usd": 0.0,
+        "note": "Local compute cost only"
+      },
+      "limits": {
+        "rpm": 1000,
+        "rpd": 100000
+      },
+      "defaults": {
+        "checkpoint": "wav2lip_gan.pth"
+      }
+    },
+    "did_lipsync": {
+      "name": "D-ID",
+      "type": "lipsync",
+      "capabilities": [
+        "lip_sync"
+      ],
+      "endpoints": {
+        "api_base": "https://api.d-id.com/v1",
+        "jobs": "/talks"
+      },
+      "auth": {
+        "type": "header",
+        "header_name": "Authorization",
+        "prefix": "Basic",
+        "key_env": "DID_API_KEY_BASE64"
+      },
+      "pricing": {
+        "unit": "per_second_video",
+        "estimate_usd": 0.0
+      },
+      "limits": {
+        "rpm": 60,
+        "rpd": 5000
+      },
+      "defaults": {
+        "driver": "standard"
+      }
+    },
+    "ffmpeg_local": {
+      "name": "FFmpeg (Local)",
+      "type": "assemble",
+      "capabilities": [
+        "concat",
+        "transitions",
+        "mux",
+        "loudness_norm"
+      ],
+      "endpoints": {
+        "cli": "ffmpeg"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "pricing": {
+        "unit": "per_use",
+        "estimate_usd": 0.0
+      },
+      "limits": {
+        "rpm": 1000,
+        "rpd": 100000
+      },
+      "defaults": {
+        "codec": "h264",
+        "fps": 24,
+        "profile": "high",
+        "audio_lufs": -16
+      }
+    },
+    "creatomate_api": {
+      "name": "Creatomate",
+      "type": "assemble",
+      "capabilities": [
+        "concat",
+        "templates",
+        "burn_subs",
+        "export_presets"
+      ],
+      "endpoints": {
+        "api_base": "https://api.creatomate.com/v1",
+        "renders": "/renders"
+      },
+      "auth": {
+        "type": "bearer",
+        "key_env": "CREATOMATE_API_KEY"
+      },
+      "pricing": {
+        "unit": "per_render_credit",
+        "estimate_usd": 0.0
+      },
+      "limits": {
+        "rpm": 60,
+        "rpd": 5000
+      },
+      "defaults": {
+        "preset": "youtube_1080p"
+      }
+    },
+    "whisper_openai": {
+      "name": "Whisper (OpenAI)",
+      "type": "asr",
+      "capabilities": [
+        "transcribe",
+        "subtitle_srt"
+      ],
+      "endpoints": {
+        "api_base": "https://api.openai.com/v1",
+        "audio": "/audio/transcriptions"
+      },
+      "auth": {
+        "type": "bearer",
+        "key_env": "OPENAI_API_KEY"
+      },
+      "pricing": {
+        "unit": "per_minute_audio",
+        "estimate_usd": 0.0
+      },
+      "limits": {
+        "rpm": 60,
+        "rpd": 10000
+      },
+      "defaults": {
+        "model": "whisper-1",
+        "response_format": "srt"
+      }
+    },
+    "whisper_local": {
+      "name": "Whisper (Local)",
+      "type": "asr",
+      "capabilities": [
+        "transcribe",
+        "subtitle_srt"
+      ],
+      "endpoints": {
+        "cli": "whisper"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "pricing": {
+        "unit": "per_use",
+        "estimate_usd": 0.0
+      },
+      "limits": {
+        "rpm": 1000,
+        "rpd": 100000
+      },
+      "defaults": {
+        "model": "base.en"
+      }
+    }
+  },
+  "$schema": "#/schemas/project_config",
+  "project_name": "Pikus_Dream_House",
+  "providers_ref": "providers_v1.json",
+  "rate_limits_ref": "rate_limits_v1.json",
+  "paths_ref": "paths_v1.json",
+  "qc_thresholds_ref": "qc_thresholds_v1.json",
+  "guidelines_ref": "guidelines_3-5_v1.json"
+}

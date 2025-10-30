@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "theme_id": "PikusDreamHouse",
+  "episode_id": "EP001",
+  "title": "Baa Baa Black Sheep at the Dream House",
+  "language": "en-IN",
+  "target_duration_s": 60,
+  "target_scene_count": 5,
+  "age_band": "3-5",
+  "created_at": "2025-10-30T09:54:30.972055Z",
+  "assets_version": "v1",
+  "inputs": {
+    "theme_manifest_ref": "/AI_Animation/Themes/PikusDreamHouse/theme_manifest.json",
+    "story_prompt_ref": "/AI_Animation/Themes/PikusDreamHouse/Episodes/EP001/story_prompt.json"
+  },
+  "outputs": {
+    "script_scenes_ref": "/AI_Animation/Themes/PikusDreamHouse/Episodes/EP001/script_scenes.json",
+    "t2i_jobs_ref": "/AI_Animation/Themes/PikusDreamHouse/Episodes/EP001/t2i_jobs.json",
+    "i2v_jobs_ref": "/AI_Animation/Themes/PikusDreamHouse/Episodes/EP001/i2v_jobs.json",
+    "vo_jobs_ref": "/AI_Animation/Themes/PikusDreamHouse/Episodes/EP001/vo_jobs.json",
+    "lipsync_jobs_ref": "/AI_Animation/Themes/PikusDreamHouse/Episodes/EP001/lipsync_jobs.json",
+    "assembly_plan_ref": "/AI_Animation/Themes/PikusDreamHouse/Episodes/EP001/assembly_plan.json",
+    "qc_report_ref": "/AI_Animation/Themes/PikusDreamHouse/Episodes/EP001/qc_report.json",
+    "telemetry_costs_ref": "/AI_Animation/Themes/PikusDreamHouse/Episodes/EP001/telemetry_costs.json",
+    "delivery_manifest_ref": "/AI_Animation/Themes/PikusDreamHouse/Episodes/EP001/delivery_manifest.json"
+  },
+  "approvals": {
+    "hitl_required_stages": [
+      "script",
+      "images",
+      "lipsync"
+    ],
+    "status": "draft"
+  },
+  "$schema": "#/schemas/episode_manifest",
+  "updated_at": "2025-10-30T10:14:44Z",
+  "theme": "Pikus_Dream_House",
+  "scene_count": 5,
+  "character_whitelist": [
+    "Piku",
+    "Nikki",
+    "Ayan"
+  ],
+  "set_lock": {
+    "name": "Piku's Dream House",
+    "allowed_rooms": [
+      "living_room",
+      "playroom"
+    ]
+  },
+  "links": {
+    "guidelines": "guidelines_3-5_v1.json",
+    "story_prompt": "story_prompt.json",
+    "characters": "character_bible_v1.json",
+    "sets": "sets_catalog_v1.json",
+    "elements": "elements_catalog_v1.json",
+    "prompt_templates": "prompt_templates_v1.json"
+  }
+}

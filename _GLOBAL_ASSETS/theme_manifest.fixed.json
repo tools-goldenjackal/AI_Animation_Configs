@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "theme_id": "PikusDreamHouse",
+  "title": "Piku’s Dream House",
+  "age_band": "3-5",
+  "language_default": "en-IN",
+  "paths_ref": "/AI_Animation/_GLOBAL_ASSETS/paths_v1.json",
+  "providers_ref": "/AI_Animation/_GLOBAL_ASSETS/FINAL/providers_v1.json"
+  "rate_limits_ref": "/AI_Animation/_GLOBAL_ASSETS/FINAL/rate_limits_v1.cleaned.json",
+  "guidelines_ref": "/AI_Animation/_GLOBAL_ASSETS/guidelines_3-5_v1.json",
+  "qc_thresholds_ref": "/AI_Animation/_GLOBAL_ASSETS/FINAL/qc_thresholds_v1.cleaned.json",
+  "policy_weights_ref": "/AI_Animation/_GLOBAL_ASSETS/policy_weights_v1.json",
+  "prompt_templates_ref": "/AI_Animation/_GLOBAL_ASSETS/prompt_templates_v1.json",
+  "voices_ref": "/AI_Animation/_GLOBAL_ASSETS/FINAL/voices_v1.cleaned.json",
+  "characters_ref": "/AI_Animation/_GLOBAL_ASSETS/characters_v1.json",
+  "sets_ref": "/AI_Animation/Themes/PikusDreamHouse/sets_catalog_v1.json",
+  "elements_ref": "/AI_Animation/Themes/PikusDreamHouse/elements_catalog_v1.json",
+  "branding_cards_ref": "/AI_Animation/_GLOBAL_ASSETS/FINAL/branding_cards_v1.json",
+  "theme_config_ref": "/AI_Animation/_GLOBAL_ASSETS/FINAL/theme_config_v1.json"
+  "notes": "Central manifest used to bootstrap any episode in this theme.",
+  "$schema": "#/schemas/theme_manifest",
+  "updated_at": "2025-10-30T10:14:44Z",
+  "theme": "Pikus_Dream_House",
+  "assets": {
+    "characters": "character_bible_v1.json",
+    "sets": "sets_catalog_v1.json",
+    "elements": "elements_catalog_v1.json",
+    "branding": "branding_cards_v1.json"
+  }
+}

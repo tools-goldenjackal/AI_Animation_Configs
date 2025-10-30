@@ -1,0 +1,32 @@
+{
+  "telemetry_fields": [
+    "timestamp",
+    "project",
+    "episode",
+    "scene_id",
+    "step",
+    "provider",
+    "status",
+    "attempts",
+    "runtime_ms",
+    "api_calls",
+    "credits_used",
+    "est_cost_usd"
+  ],
+  "$schema": "#/schemas/telemetry",
+  "version": "v1",
+  "updated_at": "2025-10-30T10:14:44Z",
+  "csv_headers": [
+    "timestamp",
+    "project",
+    "scene_id",
+    "step",
+    "tool",
+    "status",
+    "attempts",
+    "runtime_ms",
+    "api_calls",
+    "credits_used",
+    "est_cost_usd"
+  ]
+}

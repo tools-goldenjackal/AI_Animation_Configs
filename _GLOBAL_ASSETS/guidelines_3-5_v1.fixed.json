@@ -1,0 +1,267 @@
+{
+  "guideline_pack": {
+    "version": "1.0.2",
+    "last_updated": "2025-10-28",
+    "locale_default": "en-IN",
+    "audience": {
+      "age_range_years": [
+        3,
+        5
+      ],
+      "cognitive_targets": [
+        "naming",
+        "counting to 10",
+        "colors and shapes",
+        "emotions labeling",
+        "turn-taking",
+        "simple cause-effect"
+      ],
+      "attention_span_suggested_scene_length_s": [
+        6,
+        12
+      ]
+    },
+    "output_contract": {
+      "target_duration_s_range": [
+        45,
+        75
+      ],
+      "scenes_min_max": [
+        4,
+        6
+      ],
+      "required_scene_fields": [
+        "scene_id",
+        "duration_s",
+        "shot_type",
+        "narration",
+        "dialogue",
+        "actions",
+        "t2i_prompt",
+        "i2v_prompt"
+      ],
+      "shot_types_allowed": [
+        "wide",
+        "medium",
+        "close"
+      ],
+      "narration_voice": "warm, playful, reassuring"
+    },
+    "language_rules": {
+      "vocabulary_level": "very_simple",
+      "reading_level_hint": "Pre-K",
+      "max_sentence_words": 10,
+      "contractions_allowed": true,
+      "figurative_language": "minimal",
+      "second_person_prompts": "gentle and invitational",
+      "avoid": [
+        "sarcasm",
+        "irony",
+        "slang",
+        "threats",
+        "insults",
+        "body-shaming"
+      ]
+    },
+    "emotional_tone": {
+      "overall": "warm, joyful, curious",
+      "conflict_intensity": "very_low",
+      "must_end_state": "positive_resolution + reassurance",
+      "prohibit": [
+        "fear induction",
+        "shame",
+        "guilt-based messaging"
+      ]
+    },
+    "content_rules": {
+      "edutainment_target_percent_min": 60,
+      "themes_allowed": [
+        "friendship",
+        "sharing",
+        "curiosity",
+        "basic problem solving",
+        "music and rhythm",
+        "simple movement",
+        "colors/shapes/numbers",
+        "kindness to animals"
+      ],
+      "themes_banned": [
+        "violence",
+        "weapons",
+        "blood/injury",
+        "dangerous imitable behavior (e.g., climbing railings, ingesting objects)",
+        "scary/supernatural horror",
+        "nightmares imagery",
+        "bullying/teasing",
+        "romance/crush themes",
+        "bathroom humor",
+        "gross-out",
+        "medical procedures/needles",
+        "serious illness",
+        "bereavement",
+        "religious instruction",
+        "politics/current affairs",
+        "overt brand comparisons or consumerism"
+      ],
+      "role_modeling": {
+        "must_include": [
+          "prosocial behavior",
+          "kind language",
+          "consent/respect of boundaries"
+        ],
+        "parental_authority": "positive, not authoritarian"
+      }
+    },
+    "character_rules": {
+      "types_allowed": [
+        "child",
+        "caregiver",
+        "animal (friendly, non-threatening)",
+        "anthropomorphic objects (gentle)"
+      ],
+      "age_presentation": "peer-like or caregiver; no teen/adult romance",
+      "diversity_inclusion": "represent without stereotyping; avoid accents used as a joke",
+      "naming": "easy to pronounce, positive connotation",
+      "agency": "characters solve tiny problems collaboratively"
+    },
+    "visual_rules": {
+      "style": "bright, high-contrast, clean shapes, non-noisy backgrounds",
+      "camera_motion": "slow to moderate; no shaky-cam",
+      "cuts_per_minute_max": 12,
+      "strobe_flicker_prohibited_hz_min": 3,
+      "scary_visuals_banned": [
+        "dark silhouettes menacing",
+        "sharp teeth emphasis",
+        "sudden jump scares"
+      ],
+      "text_on_screen": "large, legible, minimal, must be read aloud in narration"
+    },
+    "audio_music_rules": {
+      "dialogue_priority_lufs": -12,
+      "program_loudness_lufs": -16,
+      "sudden_loud_sfx_banned": true,
+      "music_usage": "light, cheerful; auto-duck under speech by 6–12 dB",
+      "no_earworms_with_harsh_repetition": true,
+      "lyrics": "age-appropriate, no idioms that confuse"
+    },
+    "pacing_rules": {
+      "scene_length_s_range": [
+        6,
+        15
+      ],
+      "beats_per_scene": "1 simple action or idea",
+      "recap_repetition": "allowed, short, playful"
+    },
+    "accessibility_rules": {
+      "captions_required": true,
+      "color_contrast": "avoid red/green dependence; ensure clarity",
+      "on-screen_text_read_aloud": true
+    },
+    "cta_brand_rules": {
+      "calls_to_action_allowed": [
+        "gentle learning prompts: 'Can you count with us?'"
+      ],
+      "calls_to_action_banned": [
+        "like/subscribe/share pleas",
+        "external links",
+        "purchase requests"
+      ],
+      "branding": "subtle logo/title card only; no product placement",
+      "sponsorship_disclosure_required_if_any": true
+    },
+    "cultural_sensitivity": {
+      "avoid_stereotypes": true,
+      "festivals": "generic celebration unless educator-reviewed cultural guidance is provided",
+      "religious_symbols": "avoid"
+    },
+    "platform_compliance": {
+      "coppa": "no data collection, no personalized ads",
+      "youtube_kids": "kid-safe only, no outbound links",
+      "privacy": "no real child data or identifying info"
+    },
+    "safety_guardrails": {
+      "banned_word_list_examples": [
+        "kill",
+        "dead",
+        "blood",
+        "monster",
+        "ghost",
+        "gun",
+        "knife",
+        "kiss",
+        "girlfriend",
+        "boyfriend",
+        "stupid",
+        "hate",
+        "fat",
+        "ugly"
+      ],
+      "dangerous_behavior_list": [
+        "climb_balcony",
+        "ingest_non_food",
+        "play_with_sockets",
+        "play_in_traffic",
+        "run_away_from_caregiver",
+        "go_with_stranger",
+        "talk_to_stranger_without_permission",
+        "accept_gifts_from_stranger",
+        "enter_vehicle_with_stranger",
+        "wander_off_away_from_safe_zone",
+        "open_door_to_unknown_person",
+        "follow_stranger_request_to_hide",
+        "imitate_unsafe_online_challenge",
+        "share_personal_information_online",
+        "play_with_fireworks_or_flammables",
+        "unsupervised_swimming_or_water_body_play",
+        "use_weapon_or_tool_without_supervision"
+      ],
+      "auto_replace_or_rewrite_on_hit": true
+    },
+    "quality_scoring": {
+      "safety_score_min": 0.95,
+      "age_fit_score_min": 0.9,
+      "brand_tone_score_min": 0.9
+    },
+    "hitl_review_gates": {
+      "script_gate": true,
+      "images_gate": true,
+      "lip_sync_gate": true
+    }
+  },
+  "$schema": "#/schemas/guidelines",
+  "version": "v1",
+  "updated_at": "2025-10-30T10:14:44Z",
+  "age_band": "3-5",
+  "bathroom_humor": {
+    "allowed": false
+  },
+  "religious_festival_content": {
+    "allowed": false,
+    "requires_educator_review": true
+  },
+  "captions_required": true,
+  "on_screen_text_read_aloud": true,
+  "dangerous_behavior_list": [
+    "No knives, scissors, sharp tools without adult supervision",
+    "No fire, matches, lighters, stoves, candles",
+    "No outlets, cords, appliances, batteries in mouth",
+    "No choking hazards: marbles, coins, small parts near mouth",
+    "No climbing on high furniture, windows, balconies without railings",
+    "No running near roads, driveways, parking lots",
+    "No crossing streets without holding a caregiver’s hand",
+    "No entering water without an adult: pools, tubs, buckets, ponds",
+    "No head‑first sliding or diving; wear helmets where required",
+    "No plastic bags on head/face; no tying strings/cords around neck",
+    "No rough play that hits head/neck; no pushing/shoving near edges",
+    "No eating while running or lying down",
+    "No putting fingers in doors/hinges; careful with drawers",
+    "No taking medicine, vitamins, or unknown substances",
+    "No eating unknown plants, berries, powders",
+    "No following, talking to, or taking gifts from strangers",
+    "No opening the door to strangers; find a trusted adult",
+    "No leaving home, yard, school, or caregiver without permission",
+    "No sharing personal info (name, address) with strangers",
+    "No weapons, explosives, fireworks, or imitations used as play",
+    "No dangerous pranks/challenges or dares"
+  ]
+}

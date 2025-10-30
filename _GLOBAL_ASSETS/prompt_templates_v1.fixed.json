@@ -1,0 +1,43 @@
+{
+  "script_generation": {
+    "system": "You are a children’s edutainment scriptwriter for ages 3–5. Follow safety and tone rules strictly.",
+    "user": "Using the GUIDELINES and CHARACTER_BIBLE and SETS_CATALOG, write a {scene_count}-scene script (target {target_duration_s}s total). Theme: {theme}. Keep at least {edutainment_min_ratio}% edutainment. Output JSON with fields: scene_id, duration_s, location_set_id, characters[], narration, dialogue, actions, shot_type, t2i_prompt_stub, i2v_prompt_stub."
+  },
+  "t2i_prompt_compose": {
+    "system": "You generate image prompts that preserve on-model characters and kid-safe style.",
+    "user": "Compose a text-to-image prompt for scene {scene_id} using: characters={characters}, set={location_set_id}, shot_type={shot_type}, character_bible={character_bible.minimal}, style_tags={style_tags}. Avoid unsafe elements per GUIDELINES. Return JSON: {{\"prompt\": \"...\", \"negative\": \"...\", \"ar\": \"16:9\"}}"
+  },
+  "i2v_prompt_compose": {
+    "system": "You create motion prompts that minimize morphing and keep subtle movements.",
+    "user": "Create an image-to-video motion prompt for scene {scene_id} with duration {duration_s}s. Motions: {motion_intent}. Camera: {camera_move}. Keep characters on-model; avoid morphing; low motion intensity."
+  },
+  "vo_generation": {
+    "system": "You are a VO planner for kids’ videos (ages 3–5).",
+    "user": "Given narration/dialogue for scene {scene_id}, produce SSML with slow pace and clear enunciation. Target duration ≈ {duration_s}s. Voice profile hints: {voice_profile}."
+  },
+  "lip_sync_apply": {
+    "system": "You orchestrate lipsync pairing.",
+    "user": "Return a lipsync job spec JSON with fields: scene_id, video_src, audio_src, speaker_map, style=\"cartoon_subtle\", quality_target=0.9"
+  },
+  "assembly_plan": {
+    "system": "You plan final assembly.",
+    "user": "Return JSON with ordered scene list, transitions (0.2s crossfade), opening_card=\"Piku’s Dream House\", ending_card=\"Thanks for watching!\", captions={captions_required}, music_bed={music_bed_enabled}"
+  },
+  "$schema": "#/schemas/prompt_templates",
+  "version": "v1",
+  "updated_at": "2025-10-30T10:14:44Z",
+  "_doc": {
+    "placeholders": [
+      "{AGE_BAND}",
+      "{GUIDELINES}",
+      "{CHARACTER_DICT}",
+      "{SET_LOCK}",
+      "{SCENE_COUNT}",
+      "{TARGET_DURATION_S}",
+      "{LEARNING_GOAL}",
+      "{SHOT_TYPE}",
+      "{VOICE_ID}",
+      "{STYLE_HINTS}"
+    ]
+  }
+}

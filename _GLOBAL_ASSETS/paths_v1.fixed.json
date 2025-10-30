@@ -1,0 +1,25 @@
+{
+  "patterns": {
+    "episode_slug": "E{episode}",
+    "scene_slug": "S{scene}",
+    "file_base": "{project}_{episode_slug}_{scene_slug}_{asset}_{version}"
+  },
+  "save_rules": {
+    "script_json": "{scripts}/{project}_{episode_slug}_script.json",
+    "scene_image": "{images}/{episode_slug}/{scene_slug}/{file_base}.png",
+    "scene_video_raw": "{videos_raw}/{episode_slug}/{scene_slug}/{file_base}.mp4",
+    "scene_video_synced": "{videos_synced}/{episode_slug}/{scene_slug}/{file_base}.mp4",
+    "scene_audio": "{audio}/{episode_slug}/{scene_slug}/{file_base}.wav",
+    "delivery_video": "{deliveries}/{project}_{episode_slug}_final.mp4",
+    "qc_report": "{qc}/{project}_{episode_slug}_qc.json",
+    "telemetry_csv": "{telemetry}/{project}_{episode_slug}_cost_time.csv"
+  },
+  "versioning": {
+    "default_version": "v1",
+    "bump_rule": "v{n+1}"
+  },
+  "$schema": "#/schemas/paths",
+  "version": "v1",
+  "updated_at": "2025-10-30T10:14:44Z",
+  "base_dir": "/Projects/{ProjectName}"
+}

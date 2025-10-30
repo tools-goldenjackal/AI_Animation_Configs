@@ -1,0 +1,20 @@
+{
+  "captions": {
+    "enabled": true,
+    "font": "OpenSans",
+    "size_px": 48,
+    "outline_px": 4,
+    "position": "bottom_safe",
+    "read_aloud_on_screen_text": true
+  },
+  "$schema": "#/schemas/subtitle_prefs",
+  "version": "v1",
+  "updated_at": "2025-10-30T10:14:44Z",
+  "captions_required": true,
+  "style": {
+    "font": "OpenSans",
+    "size": "medium",
+    "bg_opacity": 0.6
+  },
+  "read_aloud_on_screen_text": true
+}

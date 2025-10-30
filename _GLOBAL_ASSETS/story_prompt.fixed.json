@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "theme_id": "PikusDreamHouse",
+  "episode_id": "EP001",
+  "episode_title": "Baa Baa Black Sheep at the Dream House",
+  "theme_tag": [
+    "nursery_rhyme",
+    "play"
+  ],
+  "learning_goal": [
+    "counting",
+    "sharing",
+    "colors"
+  ],
+  "tone": [
+    "warm",
+    "cheerful",
+    "encouraging"
+  ],
+  "target_duration_s": 60,
+  "scene_count": 4,
+  "language": "en-IN",
+  "characters_included": [
+    "Piku",
+    "Nikki",
+    "Ayan"
+  ],
+  "sets_required": [
+    "Dream House - Living Room",
+    "Dream House - Play Room"
+  ],
+  "constraints": {
+    "use_guidelines": true,
+    "edutainment_ratio_min": 0.6,
+    "max_cuts_per_min": 12,
+    "avoid_elements": [
+      "bathroom_humor",
+      "religious_content_unreviewed",
+      "unsafe_props"
+    ]
+  },
+  "notes_for_writer": "Keep language simple; include call-and-response moments for kids; end with gentle recap of learning goal.",
+  "$schema": "#/schemas/story_prompt",
+  "updated_at": "2025-10-30T10:14:44Z",
+  "theme": "Pikus_Dream_House",
+  "character_whitelist": [
+    "Piku",
+    "Nikki",
+    "Ayan"
+  ],
+  "set_lock": {
+    "name": "Piku's Dream House",
+    "allowed_rooms": [
+      "living_room",
+      "playroom"
+    ]
+  }
+}
