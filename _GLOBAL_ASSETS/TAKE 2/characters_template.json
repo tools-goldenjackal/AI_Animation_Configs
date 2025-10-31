@@ -1,0 +1,49 @@
+{
+  "characters": [
+    {
+      "character_id": "piku",
+      "name": "Piku",
+      "bio": "Curious, kind, loves counting games.",
+      "voice_tone": "warm, playful",
+      "catchphrases": ["Let's try it together!", "I can count it!"],
+      "do_donts": {
+        "do": ["share, help, gentle humor", "counting and simple problem solving"],
+        "dont": ["unsafe props or behavior", "bullying/teasing", "gross-out humor"]
+      },
+      "drive_folder_url": "./assets/characters/piku/"
+    },
+    {
+      "character_id": "nikki",
+      "name": "Nikki",
+      "bio": "Imaginative, musical, loves colors and songs.",
+      "voice_tone": "bright, cheerful",
+      "catchphrases": ["Sing it with me!", "So many colors!"],
+      "do_donts": {
+        "do": ["call-and-response songs", "positive encouragement"],
+        "dont": ["scary/supernatural horror", "jump scares"]
+      },
+      "drive_folder_url": "./assets/characters/nikki/"
+    },
+    {
+      "character_id": "ayan",
+      "name": "Ayan",
+      "bio": "Playful problem-solver, loves building mini-games.",
+      "voice_tone": "friendly, calm",
+      "catchphrases": ["We can fix it!", "One step at a time."],
+      "do_donts": {
+        "do": ["cooperation", "gentle exploration"],
+        "dont": ["weapons", "dangerous imitable behavior"]
+      },
+      "drive_folder_url": "./assets/characters/ayan/"
+    }
+  ],
+  "guest_character_guidelines": {
+    "max_guests_per_episode": 2,
+    "notes": "Guest characters follow the same safety and tone rules; keep on-model proportions and pastel Pixar-like style."
+  },
+  "standard_sets": [
+    { "set_id": "living_room_rainbow", "description": "Rainbow-themed living room", "drive_folder_url": "./assets/sets/living_room_rainbow/" },
+    { "set_id": "playroom", "description": "Toy-filled playroom with soft edges", "drive_folder_url": "./assets/sets/playroom/" },
+    { "set_id": "music_room", "description": "Colorful music room for sing-alongs", "drive_folder_url": "./assets/sets/music_room/" }
+  ]
+}
