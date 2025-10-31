@@ -1,0 +1,40 @@
+{
+  "render": {
+    "profiles": {
+      "youtube_landscape": { "resolution": "1920x1080", "fps": 24, "aspect": "16:9" },
+      "shorts_vertical":   { "resolution": "1080x1920", "fps": 30, "aspect": "9:16" }
+    },
+    "default_profile": "youtube_landscape"
+  },
+  "scene": {
+    "segment_sec_default": 5,
+    "segment_sec_max": 10,
+    "test_total_sec": 30,
+    "prod_total_sec_default": 150
+  },
+  "providers": {
+    "llm":    { "label": "openai:gpt-4o-mini", "credential": "openai_main" },
+    "tti":    { "label": "openai:dalle-3",     "credential": "openai_main" },
+    "i2v":    { "label": "wanai:v1",           "credential": "wanai_main", "alternates": ["runway:gen3", "kling:v1"] },
+    "tts":    { "label": "heygen:fast",        "credential": "heygen_main", "alternates": ["elevenlabs:multilingual_v2"] }
+  },
+  "style": {
+    "art_style": "Pastel colors, Pixar-like soft edges, high brightness, clean lines, kid-safe palette.",
+    "consistency": "Keep on-model proportions, outfits, and facial features per character bible; avoid brand-like logos."
+  },
+  "safety": {
+    "negative_terms": [
+      "weapons","gun","knife","violence","unsafe props","sharp edges","glass",
+      "blood","blood/injury","scary/supernatural horror","monster","ghost",
+      "sudden jump scares","dark silhouettes menacing","dangerous imitable behavior (e.g., climbing railings, ingesting objects)",
+      "bullying/teasing","gross-out","bathroom humor","stupid","ugly","fat",
+      "romance/crush themes","boyfriend","girlfriend","kiss","religious instruction",
+      "politics/current affairs","overt brand comparisons or consumerism","purchase requests",
+      "serious illness","bereavement","external links","nightmares imagery","sharp teeth emphasis"
+    ],
+    "age_guardrails": "Content suitable for ages 3–6; gentle tone; avoid fear, injury, and risky behavior."
+  },
+  "budget": {
+    "max_usd_per_episode": 100
+  }
+}
