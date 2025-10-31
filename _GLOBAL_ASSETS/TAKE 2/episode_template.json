@@ -1,0 +1,33 @@
+{
+  "series_id": "pikusdreamhouse",
+  "theme_id": "nursery",
+  "episode_id": "ep001",
+  "episode_title": "Baa Baa Black Sheep",
+  "metadata": {
+    "duration_sec": 30,
+    "theme": "nursery",
+    "character_count": 3,
+    "target_age_band": "3-6",
+    "status": "draft",
+    "created_by": "your_name",
+    "created_at": "{{ISO8601}}"
+  },
+  "inputs": {
+    "idea_prompt": "Teach counting to 5 using 'Baa Baa Black Sheep' in the dream house.",
+    "primary_characters": ["piku","nikki","ayan"],
+    "language": "en",
+    "output_profile": "youtube_landscape"
+  },
+  "refs": {
+    "series_ref": "../../series.json",
+    "theme_ref": "../theme.json",
+    "characters_ref": "../../characters.json",
+    "config_ref": "../../config.json"
+  },
+  "outputs": {
+    "keyframes_dir": "./outputs/keyframes/",
+    "clips_dir": "./outputs/clips/",
+    "audio_dir": "./outputs/audio/",
+    "final_dir": "./outputs/final/"
+  }
+}
