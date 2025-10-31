@@ -1,0 +1,10 @@
+{
+  "series_id": "pikusdreamhouse",
+  "series_title": "Piku’s Dream House",
+  "age_band": "3-6",
+  "languages": ["en"],
+  "description": "Three Pixar-type characters — Piku, Nikki, and Ayan — play games and sing along to nursery rhymes inside a rainbow-themed dream house with 3–4 rooms.",
+  "drive_root": "GJS/PIKUSDREAMHOUSE/TAKE 1",
+  "characters_ref": "./characters.json",
+  "config_ref": "./config.json"
+}
