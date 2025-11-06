@@ -5,45 +5,42 @@
       "name": "Piku",
       "bio": "Curious, kind, loves counting games.",
       "voice_tone": "warm, playful",
-      "catchphrases": ["Let's try it together!", "I can count it!"],
-      "do_donts": {
-        "do": ["share, help, gentle humor", "counting and simple problem solving"],
-        "dont": ["unsafe props or behavior", "bullying/teasing", "gross-out humor"]
+      "style": {
+        "signature": "yellow five-point star on head",
+        "palette": ["#B7FF3A", "#FFD34D"],
+        "material": "soft plush, matte, fuzzy edges",
+        "shape": "round body, short limbs, big eyes",
+        "forbidden": ["text", "logos", "watermarks"]
       },
-      "drive_folder_url": "./assets/characters/piku/"
+      "drive": { "refs_folder_path": "ASSETS/characters/piku" }
     },
     {
       "character_id": "nikki",
       "name": "Nikki",
       "bio": "Imaginative, musical, loves colors and songs.",
       "voice_tone": "bright, cheerful",
-      "catchphrases": ["Sing it with me!", "So many colors!"],
-      "do_donts": {
-        "do": ["call-and-response songs", "positive encouragement"],
-        "dont": ["scary/supernatural horror", "jump scares"]
+      "style": {
+        "signature": "large pink bow",
+        "palette": ["#FF7FB0", "#FFCCF0"],
+        "material": "soft plush, pastel finish",
+        "shape": "round body, small limbs, big eyes",
+        "forbidden": ["text", "logos", "watermarks"]
       },
-      "drive_folder_url": "./assets/characters/nikki/"
+      "drive": { "refs_folder_path": "ASSETS/characters/nikki" }
     },
     {
       "character_id": "ayan",
       "name": "Ayan",
       "bio": "Playful problem-solver, loves building mini-games.",
       "voice_tone": "friendly, calm",
-      "catchphrases": ["We can fix it!", "One step at a time."],
-      "do_donts": {
-        "do": ["cooperation", "gentle exploration"],
-        "dont": ["weapons", "dangerous imitable behavior"]
+      "style": {
+        "signature": "heart badge on chest",
+        "palette": ["#FF3B30", "#FFB199"],
+        "material": "soft plush, matte",
+        "shape": "round body, tuft on head, big eyes",
+        "forbidden": ["text", "logos", "watermarks"]
       },
-      "drive_folder_url": "./assets/characters/ayan/"
+      "drive": { "refs_folder_path": "ASSETS/characters/ayan" }
     }
-  ],
-  "guest_character_guidelines": {
-    "max_guests_per_episode": 2,
-    "notes": "Guest characters follow the same safety and tone rules; keep on-model proportions and pastel Pixar-like style."
-  },
-  "standard_sets": [
-    { "set_id": "living_room_rainbow", "description": "Rainbow-themed living room", "drive_folder_url": "./assets/sets/living_room_rainbow/" },
-    { "set_id": "playroom", "description": "Toy-filled playroom with soft edges", "drive_folder_url": "./assets/sets/playroom/" },
-    { "set_id": "music_room", "description": "Colorful music room for sing-alongs", "drive_folder_url": "./assets/sets/music_room/" }
   ]
 }
