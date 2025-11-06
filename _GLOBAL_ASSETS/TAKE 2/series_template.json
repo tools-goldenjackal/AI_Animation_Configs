@@ -3,8 +3,50 @@
   "series_title": "Piku’s Dream House",
   "age_band": "3-6",
   "languages": ["en"],
-  "description": "Three Pixar-type characters — Piku, Nikki, and Ayan — play games and sing along to nursery rhymes inside a rainbow-themed dream house with 3–4 rooms.",
-  "drive_root": "GJS/PIKUSDREAMHOUSE/TAKE 1",
+  "description": "Three plush friends — Piku, Nikki, and Ayan — play games and sing along to nursery rhymes inside a colorful dream house.",
+  "drive_root": "GJS/PIKUSDREAMHOUSE",
+
+  "assets": {
+    "characters_path": "ASSETS/characters",
+    "backgrounds_path": "ASSETS/backgrounds"
+  },
+
+  "sets": [
+    {
+      "set_id": "house_exterior",
+      "name": "Dream House Exterior",
+      "style": {
+        "look": "toy-like house with rainbow roof and bright garden",
+        "lighting": "daylight, clear sky",
+        "props": ["balloons", "trees", "pathway"],
+        "forbidden": ["text", "logos", "signboards"]
+      },
+      "drive": { "refs_folder_path": "ASSETS/backgrounds/House" }
+    },
+    {
+      "set_id": "living_room",
+      "name": "Dream House Living Room",
+      "style": {
+        "look": "pastel walls, rainbow mural, warm window light, plush furniture",
+        "props": ["sofa", "blocks", "balloons", "round rainbow rug"],
+        "lighting": "soft warm sunlight from right",
+        "forbidden": ["text", "watermarks", "realistic glass/sharp edges"]
+      },
+      "drive": { "refs_folder_path": "ASSETS/backgrounds/Playroom" }
+    },
+    {
+      "set_id": "dining_room",
+      "name": "Dream House Dining Room",
+      "style": {
+        "look": "bright wooden textures, colorful tableware, rainbow accents",
+        "lighting": "window side-light",
+        "forbidden": ["text", "logos", "sharp cutlery emphasis"]
+      },
+      "drive": { "refs_folder_path": "ASSETS/backgrounds/Dining room" }
+    }
+  ],
+
   "characters_ref": "./characters.json",
   "config_ref": "./config.json"
 }
+
